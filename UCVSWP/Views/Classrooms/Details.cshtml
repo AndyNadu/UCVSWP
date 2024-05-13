@@ -1,0 +1,70 @@
+﻿@model UCVSWP.Models.Classroom
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/classroomdetailspage.css">
+</head>
+
+<body style="background-color:cornflowerblue">
+
+    <div class="classroom-nav d-flex">
+        <a href="#" class="flex-fill text-center">Stream</a>
+        <a href="@Url.Action("Create", "Assignments", new { classroomId = Model.ClassroomID })" class="flex-fill text-center">Classwork</a>
+        <a href="@Url.Action("Index","People",new{clsid = Model.ClassroomID})" class="flex-fill text-center">People</a>
+    </div>
+
+    <div class="classroom-content">
+        <h4>Classroom</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+        </dl>
+        <button onclick="location.href='@Url.Action("Create", "Announcements")'" id="post-announcement" class="btn btn-primary mt-2">Post an announcement</button>
+    </div>
+
+     <div class="classroom-content">
+        <h3>Announcements</h3>
+        <ul>
+            @foreach (var announcement in Model.Announcements)
+            {
+                <li>
+                    <strong>@announcement.Title</strong> - @announcement.Content
+                </li>
+            }
+        </ul>
+        </div>
+        
+        <div class="classroom-content">
+        <h3>Assignments</h3>
+        <ul>
+            @foreach (var assignment in Model.Assignments)
+            {
+                <li>
+                    <a href="@Url.Action("Details", "Assignments", new { id = assignment.AssignmentID })" style="text-decoration: none;">
+                        @assignment.Name - @assignment.Content
+                    </a>
+                </li>
+            }
+        </ul>
+        </div>
+
+
+        <div>
+            <a asp-action="Index">Back to Classrooms</a>
+        </div>
+</body>

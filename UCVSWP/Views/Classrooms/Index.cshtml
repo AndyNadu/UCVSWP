@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/classroomspage.css">
+</head>
+
+<body style="background-image: url('/images/virtual-classroom.png');background-position: center;">
+    <h1 style="margin: 1rem; color: #333;">Classrooms</h1>
+    <a href="@Url.Action("Create")" class="create-button">Create New</a>
+    <div class="classroom-grid">
+        @foreach (UCVSWP.Models.Classroom item in Model)
+        {
+            <div class="classroom-card">
+                <a href="@Url.Action("Details", new { id = item.ClassroomID })">
+                    <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
+                    <p>@Html.DisplayFor(modelItem => item.Description)</p>
+                </a>
+                <div class="button-group">
+                    <a class="btn btn-light" asp-action="Edit" asp-route-id="@item.ClassroomID">Edit</a>
+                    <a class="btn btn-light" asp-action="Delete" asp-route-id="@item.ClassroomID">Delete</a>
+                </div>
+            </div>
+
+        }
+    </div>
+</body>

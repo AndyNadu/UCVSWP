@@ -1,0 +1,40 @@
+﻿@model UCVSWP.Models.GradeAssignment
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>GradeAssignment</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="GradeAssignmentID" />
+            <div class="form-group">
+                <label asp-for="GradeID" class="control-label"></label>
+                <select asp-for="GradeID" class="form-control" asp-items="ViewBag.GradeID"></select>
+                <span asp-validation-for="GradeID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AssignmentID" class="control-label"></label>
+                <select asp-for="AssignmentID" class="form-control" asp-items="ViewBag.AssignmentID"></select>
+                <span asp-validation-for="AssignmentID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

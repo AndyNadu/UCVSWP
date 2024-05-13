@@ -1,0 +1,28 @@
+﻿body {
+    background-color: #f2f2f2;
+}
+
+.text-center {
+    padding: 2rem;
+    background-color: #ffffff;
+    margin: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+
+.display-4 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #165ead;
+    }

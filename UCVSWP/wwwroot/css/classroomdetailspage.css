@@ -1,0 +1,28 @@
+﻿
+.classroom-nav {
+    background-color: #fafafa;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 1rem;
+}
+
+.classroom-nav a {
+    color: #3c4043;
+    font-weight: 500;
+    padding: 1rem;
+    display: block;
+    text-decoration: none;
+}
+
+    .classroom-nav a:hover {
+        color: #202124;
+        background-color: #f1f3f4;
+    }
+
+.classroom-content {
+    background-color: #fff;
+    padding: 2rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.25rem;
+}
+
+
