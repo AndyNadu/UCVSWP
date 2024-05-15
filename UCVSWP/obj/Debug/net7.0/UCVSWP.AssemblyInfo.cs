@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UCVSWP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d9fb93b4e4b9f540fc71e572fd718fdf15382ea3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5770142383bde3a6ff18c71258f1127eca15b742")]
 [assembly: System.Reflection.AssemblyProductAttribute("UCVSWP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UCVSWP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
